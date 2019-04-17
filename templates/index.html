@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      </style>
+
+</head>
+
+
+
+<body>
+  <div class="container text-center">
+    <h1 class="jumbotron">Mission to Mars</h1>
+    <p><center><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data!</a></center></p>
+  </div>
+</body>
+
+<div class="container">
+    <!-- Top row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Latest Mars News</h1>
+            <br>
+            <p><strong>{{mars_data.news_title}}</strong></p>
+            <p>{{mars_data.news_description}}</p>
+        </div>
+    </div>
+    
+    <!-- 1 row with 2 columns, col 1 is the  -->
+    <div class="row">
+    <div class="col-md-12">
+    <h1>Featured Mars image</h1>
+    
+    <img src = {{mars_data.latest_image[0]}}>
+    </div>
+
+    <!-- <div class="row">
+    <div class="col-md-6"> -->
+    <p style="border:2px; border-style:solid; border-color:lightgrey ; padding: 1em;">{{mars_data.mars_current_weather}}</p>
+    
+    </div>
+    </div>
+
+
+  <table>
+           <tr>
+             <th></th>
+             <th>Value</th>
+           </tr>
+           <tr>
+             <td>{{mars_data.mars_stats[0][0]}}</td>
+             <td>{{mars_data.mars_stats[0][1]}}</td>
+           </tr>
+           <tr>
+             <td>{{mars_data.mars_stats[1][0]}}</td>
+             <td>{{mars_data.mars_stats[1][1]}}</td>
+           </tr>
+           <tr>
+           <td>{{mars_data.mars_stats[2][0]}}</td>
+             <td>{{mars_data.mars_stats[2][1]}}</td>
+           </tr>
+           <tr>
+             <td>{{mars_data.mars_stats[3][0]}}</td>
+             <td>{{mars_data.mars_stats[3][1]}}</td>
+           </tr>
+           <tr>
+             <td>{{mars_data.mars_stats[4][0]}}</td>
+             <td>{{mars_data.mars_stats[4][1]}}</td>
+           </tr>
+           <tr>
+             <td>{{mars_data.mars_stats[5][0]}}</td>
+             <td>{{mars_data.mars_stats[5][1]}}</td>
+           </tr>
+           <tr>
+             <td>{{mars_data.mars_stats[6][0]}}</td>
+             <td>{{mars_data.mars_stats[6][1]}}</td>
+             </tr>
+           <tr>
+             <td>{{mars_data.mars_stats[7][0]}}</td>
+             <td>{{mars_data.mars_stats[7][1]}}</td>
+             </tr>
+           <tr>
+             <td>{{mars_data.mars_stats[8][0]}}</td>
+             <td>{{mars_data.mars_stats[8][1]}}</td>
+             </tr>
+         </table>
+
+      <footer>
+        <div class="navbar">
+        <p>To view high resolution images of the major martian hemispheres
+        <a class="active" href="hemisphere_test.html">Hemispheres</a></p>
+      </footer>
+
+</html>
